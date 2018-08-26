@@ -25,12 +25,12 @@ class QuizQuestion extends Component {
             </section>
             <section className='buttons'>
                 <ul>
-                    {this.props.quiz_question.answer_options.map((a,i) => <QuizQuestionButton key={ i } button_text={ a } clickHandler={ this.handleClick.bind(this) } />)};
+                    { this.props.quiz_question.answer_options.map((a,i) => <QuizQuestionButton key={ i } button_text={ a } clickHandler={ this.handleClick.bind(this) } />) };
                 </ul>
             </section>
-            {this.state.incorrectAnswer ? 
+            { this.state.incorrectAnswer ? 
             <p className='error'>Sorry, that's not right</p> : 
-            null}
+            null }
         </main>
         );
     }
